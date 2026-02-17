@@ -1,0 +1,290 @@
+<!-- Desktop Top Bar -->
+<div class="site-top-bar hide-on-mobile">
+    <div class="container top-bar-flex">
+        <div class="top-bar-left">
+            <span class="top-bar-item"><i class="fas fa-calendar-alt"></i> <span id="desktopDate"></span></span>
+            <span class="top-bar-item"><i class="fas fa-phone-alt"></i> +94 11 234 5678</span>
+            <span class="top-bar-item"><i class="fas fa-envelope"></i> info@helpinghearts.com</span>
+        </div>
+        <div class="top-bar-right">
+            <div class="mobile-header-social-wrap">
+                <a href="#" class="social-link-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Header Top (Donate + Social) -->
+<div class="mobile-header-top hide-on-desktop">
+    <div class="container mobile-header-top-inner">
+        <a href="contact.html" class="mobile-donate-link">
+            Donate <i class="fas fa-heart"></i>
+        </a>
+        <div class="mobile-header-social-wrap">
+            <a href="#" class="social-link-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="container header-inner">
+    <!-- Left: Hamburger + Logo + Tamil lines -->
+    <div class="branding">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu"
+            onclick="const m=document.getElementById('hamburgerMenu'); const o=document.querySelector('.hamburger-overlay'); if(m&&o){m.classList.add('active'); o.classList.add('active'); document.body.style.overflow='hidden';}">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo-wrapper">
+            <img src="assets/logo-helping.jpg" alt="Helping Hearts Tamil logo" class="logo-img animate-float" />
+        </div>
+        <div class="brand-text">
+            <div class="site-slogan">“உண்மை, நேர்மை, ஒழுக்கம்”</div>
+            <div class="site-tagline">உதவும் இதயங்கள் நிறுவனம்</div>
+            <div class="site-title gradient-text">Helping Hearts Foundation</div>
+        </div>
+    </div>
+
+    <!-- Center: Icon navigation (desktop only, hidden on mobile via CSS) -->
+    <div class="header-nav header-nav-desktop">
+        <a href="index.html" class="icon-link" title="முகப்பு" data-tooltip="index" data-nav="index"><i
+                class="fa-solid fa-house"></i></a>
+        <a href="news.html" class="icon-link" title="எம்மவர் செய்திகள்" data-tooltip="Latest News" data-nav="news"><i
+                class="fa-solid fa-newspaper"></i></a>
+        <a href="aboutus.html" class="icon-link" title="எம்மைப்பற்றி" data-tooltip="About Us" data-nav="about"><i
+                class="fa-solid fa-circle-info"></i></a>
+        <a href="team.html" class="icon-link" title="மேலாண்மைக்குழு" data-tooltip="Management Team" data-nav="team"><i
+                class="fa-solid fa-users-gear"></i></a>
+        <a href="#" class="icon-link" title="வருடாந்த அறிக்கை" data-tooltip="Annual Reports" data-nav="reports"><i
+                class="fa-solid fa-file-contract"></i></a>
+        <a href="contact.html" class="icon-link" title="எம்மைத் தொடர்புகொள்ள" data-tooltip="Contact Us"
+            data-nav="contact"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <div class="header-controls">
+        <div class="search-container">
+            <!-- <label class="search-label hide-on-mobile">தேடல்:</label> -->
+            <input type="text" id="searchInput" class="search-input" placeholder="தேடல்..." />
+            <button class="search-btn" id="searchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <a href="#" class="donate-btn-header hide-on-mobile">
+            Donate <i class="fas fa-heart"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Mobile Category Navigation (Horizontal Scroll) -->
+<nav class="mobile-nav-scroll">
+    <div class="container">
+        <ul class="scroll-menu">
+            <li>
+                <a href="#"
+                    onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.scroll-menu > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">எமது
+                    கிளைகள் <i class="fas fa-chevron-down"></i></a>
+                <ul class="scroll-dropdown">
+                    <li><a href="#">ஜெர்மனி கிளை</a></li>
+                    <li><a href="#">சுவிட்சர்லாந்து கிளை</a></li>
+                    <li><a href="#">இலங்கை கிளை</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.scroll-menu > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">எமது
+                    பங்கு <i class="fas fa-chevron-down"></i></a>
+                <ul class="scroll-dropdown">
+                    <li><a href="#">கல்வி உதவி</a></li>
+                    <li><a href="#">மருத்துவ உதவி</a></li>
+                    <li><a href="#">வாழ்வாதார உதவி</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.scroll-menu > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">மாவட்டரீதியாக
+                    <i class="fas fa-chevron-down"></i></a>
+                <ul class="scroll-dropdown">
+                    <li><a href="#">யாழ்ப்பாணம்</a></li>
+                    <li><a href="#">மன்னார்</a></li>
+                    <li><a href="#">வன்னி</a></li>
+                    <li><a href="#">திருகோணமலை</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.scroll-menu > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">மகளிர்
+                    ஒன்றியம் <i class="fas fa-chevron-down"></i></a>
+                <ul class="scroll-dropdown">
+                    <li><a href="#">திட்டங்கள்</a></li>
+                    <li><a href="#">நடவடிக்கைகள்</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.scroll-menu > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">காணொளிகள்
+                    <i class="fas fa-chevron-down"></i></a>
+                <ul class="scroll-dropdown">
+                    <li><a href="#">நிகழ்வுகள்</a></li>
+                    <li><a href="#">செயல்பாடுகள்</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Overlay for sidebar -->
+<div class="hamburger-overlay"
+    onclick="document.getElementById('hamburgerMenu').classList.remove('active'); this.classList.remove('active'); document.body.style.overflow='';">
+</div>
+
+<!-- Hamburger Sidebar Menu -->
+<div class="hamburger-menu" id="hamburgerMenu">
+    <div class="hamburger-header">
+        <h3>பிரிவுகள்</h3>
+        <button class="close-btn" id="closeHamburger"
+            onclick="document.getElementById('hamburgerMenu').classList.remove('active'); document.querySelector('.hamburger-overlay').classList.remove('active'); document.body.style.overflow='';">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="hamburger-nav">
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">எமது
+                கிளைகள் <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">ஜெர்மனி கிளை</a></li>
+                <li><a href="#">சுவிட்சர்லாந்து கிளை</a></li>
+                <li><a href="#">இலங்கை கிளை</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">எமது
+                பங்கு <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">கல்வி உதவி</a></li>
+                <li><a href="#">மருத்துவ உதவி</a></li>
+                <li><a href="#">வாழ்வாதார உதவி</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">மாவட்டரீதியாக
+                <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">யாழ்ப்பாணம்</a></li>
+                <li><a href="#">மன்னார்</a></li>
+                <li><a href="#">வன்னி</a></li>
+                <li><a href="#">திருகோணமலை</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">மகளிர்
+                ஒன்றியம் <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">திட்டங்கள்</a></li>
+                <li><a href="#">நடவடிக்கைகள்</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">வருடாந்த
+                அறிக்கை <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">2024 அறிக்கை</a></li>
+                <li><a href="#">2023 அறிக்கை</a></li>
+                <li><a href="#">பழைய அறிக்கைகள்</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">ஒருங்கிணைந்த
+                பண்ணை மாங்குளம் <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">திட்டங்கள்</a></li>
+                <li><a href="#">செயல்பாடுகள்</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="hamburger-item"
+                onclick="this.parentElement.classList.toggle('active'); document.querySelectorAll('.hamburger-nav > li').forEach(li=>li!==this.parentElement&&li.classList.remove('active')); return false;">காணொளிகள்
+                <i class="fas fa-chevron-down"></i></a>
+            <ul class="hamburger-dropdown">
+                <li><a href="#">நிகழ்வுகள்</a></li>
+                <li><a href="#">செயல்பாடுகள்</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<nav class="main-nav" aria-label="Main Navigation">
+    <div class="container nav-inner">
+        <ul class="menu">
+            <li>
+                <a href="#">எமது கிளைகள்</a>
+                <ul class="dropdown">
+                    <li><a href="#">ஜெர்மனி கிளை</a></li>
+                    <li><a href="#">சுவிட்சர்லாந்து கிளை</a></li>
+                    <li><a href="#">இலங்கை கிளை</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">எமது பங்கு</a>
+                <ul class="dropdown">
+                    <li><a href="#">கல்வி உதவி</a></li>
+                    <li><a href="#">மருத்துவ உதவி</a></li>
+                    <li><a href="#">வாழ்வாதார உதவி</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">மாவட்டரீதியாக</a>
+                <ul class="dropdown">
+                    <li><a href="#">யாழ்ப்பாணம்</a></li>
+                    <li><a href="#">மன்னார்</a></li>
+                    <li><a href="#">வன்னி</a></li>
+                    <li><a href="#">திருகோணமலை</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">மகளிர் ஒன்றியம்</a>
+                <ul class="dropdown">
+                    <li><a href="#">திட்டங்கள்</a></li>
+                    <li><a href="#">நடவடிக்கைகள்</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">வருடாந்த அறிக்கை</a>
+                <ul class="dropdown">
+                    <li><a href="#">2024 அறிக்கை</a></li>
+                    <li><a href="#">2023 அறிக்கை</a></li>
+                    <li><a href="#">பழைய அறிக்கைகள்</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ஒருங்கிணைந்த பண்ணை மாங்குளம்</a>
+                <ul class="dropdown">
+                    <li><a href="#">திட்டங்கள்</a></li>
+                    <li><a href="#">செயல்பாடுகள்</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">காணொளிகள்</a>
+                <ul class="dropdown">
+                    <li><a href="#">நிகழ்வுகள்</a></li>
+                    <li><a href="#">செயல்பாடுகள்</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

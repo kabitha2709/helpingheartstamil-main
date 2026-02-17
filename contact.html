@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <title>எம்மைத் தொடர்புகொள்ள – HelpingHeartsTamil</title>
+    <meta name="description"
+        content="Helping Hearts Foundation - Contact page. உதவும் இதயங்கள் நிறுவனத்தை தொடர்புகொள்ள." />
+    <meta name="theme-color" content="#2c6f44" id="theme-color" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="include.js" defer></script>
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content"
+        style="position:absolute; top:-40px; left:0; background:var(--color-primary); color:white; padding:8px 16px; z-index:9999; transition:top 0.3s; text-decoration:none; font-weight:600;">Skip
+        to main content</a>
+
+    <!-- Floating Background Hearts -->
+    <div class="floating-hearts-container" id="heartsContainer"></div>
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left"><span>HelpingHeartsTamil – உதவும் இதயங்கள்</span></div>
+            <div class="top-right" style="display: flex; align-items: center;">
+                <!-- SEARCH BAR -->
+
+
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i>Facebook</a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i>YouTube</a>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="site-header" id="header"></header>
+    <!-- Hero - Contact Page Header -->
+    <!-- <section class="hero">
+                    <div class="container hero-inner">
+                        <div class="hero-text">
+                            <h1>எம்மைத் தொடர்புகொள்ள</h1>
+                            <p>உங்கள் கருத்துகள்,
+                                    கேள்விகள் மற்றும் நன்கொடைகள் தொடர்பான விவரங்களுக்கு கீழ்கண்ட படிவத்தை நிரப்பவும்
+                                    அல்லது நேரடியாக எம்மைத் தொடர்புகொள்ளவும். </p>
+                            </div>
+                        </div>
+                    </section> -->
+
+    <!-- Main layout - Contact Form+Sidebar -->
+    <div class="container layout" id="main-content" style="margin-top: 40px; align-items: start;">
+        <!-- Content (contact form) -->
+        <main class="content" style="padding-top: 0;">
+            <!-- Contact Section -->
+            <section class="contact-section" style="padding: 30px; margin: 0;">
+                <h2 class="section-title">தொடர்புக்கு</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="floating-label-group"><input type="text" id="name" name="name" class="floating-input"
+                            placeholder=" " required><label for="name" class="floating-label">உங்கள்
+                            பெயர்</label></div>
+                    <div class="floating-label-group"><input type="email" id="email" name="email" class="floating-input"
+                            placeholder=" " required><label for="email" class="floating-label">மின்னஞ்சல்</label></div>
+                    <div class="floating-label-group"><input type="tel" id="phone" name="phone" class="floating-input"
+                            placeholder=" "><label for="phone" class="floating-label">தொலைபேசி</label></div>
+                    <div class="floating-label-group"><textarea id="message" name="message"
+                            class="floating-input floating-textarea" placeholder=" " rows="5" required></textarea><label
+                            for="message" class="floating-label">உங்கள் செய்தி</label></div><button type="submit"
+                        class="btn btn-primary btn-ripple" style="width: 100%;">அனுப்பவும் <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </section>
+            <!-- questions Section -->
+            <section style="margin-top: 48px;">
+                <h2 class="section-title">அடிக்கடி கேட்கப்படும் கேள்விகள்</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question"><span>நன்கொடை வழங்குவது
+                                எப்படி?</span><i class="fa-solid fa-plus"></i></div>
+                        <div class="faq-answer">
+                            <p>நீங்கள் வங்கி மூலம் நேரடியாக நன்கொடை வழங்கலாம். எங்கள்
+                                வங்கி விவரங்கள் sidebar இல் கொடுக்கப்பட்டுள்ளன. அல்லது
+                                ஆன்லைன் படிவம் மூலமும் நன்கொடை வழங்கலாம்.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question"><span>தன்னார்வலராக இணைவது
+                                எப்படி?</span><i class="fa-solid fa-plus"></i></div>
+                        <div class="faq-answer">
+                            <p>எங்களை தொடர்புகொண்டு நீங்கள் தன்னார்வலராக இணையலாம். எமது
+                                மாவட்ட ஒருங்கிணைப்பாளர்கள் உங்களை தொடர்புகொண்டு தேவையான
+                                தகவல்களை வழங்குவார்கள்.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question"><span>உதவி பெறுவது எப்படி?</span><i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>நீங்கள் எமது அலுவலகத்தை நேரில் தொடர்புகொள்ளலாம் அல்லது
+                                ஆன்லைன் விண்ணப்ப படிவத்தை பூர்த்தி செய்யலாம். தேவையான
+                                ஆவணங்களுடன் விண்ணப்பித்தால் விரைவில் பரிசீலிக்கப்படும்.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Sidebar (contact info + donate) -->
+        <aside class="sidebar" style="padding-top: 0;">
+            <section class="widget">
+                <h3 class="widget-title">முகவரி</h3>
+                <p style="font-size:0.95rem; margin-bottom: 12px; color: var(--color-text);">
+                    <span style="font-weight:700; color: var(--color-primary);">உதவும்
+                        இதயங்கள்</span>(HelpingHeartsTamil)
+                </p>
+                <p style="font-size:0.95rem; margin-bottom: 8px; color: var(--color-text-muted);">
+                    <i class="fa-solid fa-location-dot" style="color: var(--color-primary); width: 20px;"></i>ஜெர்மனி –
+                    இலண்டன் – சுவிஸ் கிளைகள் மற்றும்<br />இலங்கை தாயக அலுவலகங்கள் மூலம்
+                    செயல்படுகிறது.
+                </p>
+                <p style="font-size:0.95rem; margin-bottom: 8px; color: var(--color-text-muted);">
+                    <i class="fa-solid fa-phone"
+                        style="color: var(--color-primary); width: 20px;"></i><strong>Phone:</strong>+49
+                    xxx xxxx xxx
+                </p>
+                <p style="font-size:0.95rem; margin-bottom: 8px; color: var(--color-text-muted);">
+                    <i class="fa-solid fa-envelope"
+                        style="color: var(--color-primary); width: 20px;"></i><strong>Email:</strong>info@helpingheartstamil.com
+                </p>
+                <p style="font-size:0.95rem; margin-bottom: 0; color: var(--color-text-muted);">
+                    <i class="fa-solid fa-globe" style="color: var(--color-primary); width: 20px;"></i><strong>சமூக
+                        ஊடகங்கள்:</strong><br /><span style="display: inline-block; margin-top: 6px;"><a href="#"
+                            style="color: var(--color-primary); margin-right: 12px;"><i
+                                class="fab fa-facebook-f"></i>Facebook</a><a href="#"
+                            style="color: var(--color-primary);"><i class="fab fa-youtube"></i>YouTube</a></span>
+                </p>
+            </section>
+            <!-- <section class="widget">
+                                            <h3 class="widget-title">மாவட்டரீதியாக</h3>
+                                            <ul class="link-list">
+                                                <li><a href="#">அம்பாறை</a></li>
+                                                <li><a href="#">கிளிநொச்சி</a></li>
+                                                <li><a href="#">திருகோணமலை</a></li>
+                                                <li><a href="#">மட்டக்களப்பு</a></li>
+                                                <li><a href="#">மன்னார்</a></li>
+                                                <li><a href="#">முல்லைத்தீவு</a></li>
+                                                <li><a href="#">யாழ்ப்பாணம்</a></li>
+                                                <li><a href="#">வவுனியா</a></li>
+                                                <li><a href="#">மலையகம்</a></li>
+                                            </ul>
+                                        </section>
+                                        <section id="donate" class="widget donate-widget">
+                                            <h3 class="widget-title">நன்கொடை</h3>
+                                            <p class="widget-text" style="color: var(--color-text);">பங்களிப்பு படிவத்தை
+                                                பூர்த்தி செய்து, நீங்கள் விரும்பும் தொகையை குறிப்பிட்ட திகதியில்
+                                                வங்கியில் இருந்து எடுக்க எமது பொருளாளர் ஏற்பாடு செய்வார். தொடர்ந்து
+                                                பங்களிக்க முடியாவிட்டால், எமக்கு அறிவித்ததும் உடனடியாக நிறுத்தப்படும்.
+                                            </p>
+                                            <div class="bank-details">
+                                                <p><strong>Bank:</strong>Kreissparkasse Tuttlingen</p>
+                                                <p><strong>Konto nummer:</strong>0008559182</p>
+                                                <p><strong>BLZ:</strong>643 500 70</p>
+                                                <p><strong>BIC:</strong>SOLADES1TUT</p>
+                                                <p><strong>IBAN:</strong>DE07 6435 0070 0008 5591 82</p>
+                                            </div><a href="#" class="btn btn-primary full-width btn-ripple">நன்கொடை
+                                                விவரங்கள் <i class="fa-solid fa-heart"></i></a>
+                                        </section> -->
+        </aside>
+    </div>
+    <!-- Map Section -->
+    <section class="map-section" style="margin-top: 48px;">
+        <div class="container">
+            <h2 class="section-title">எமது இருப்பிடம்</h2>
+            <div class="map-wrapper"
+                style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); height: 450px; margin-bottom: 48px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42635.83685603525!2d8.776633644079586!3d47.98925507119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479099955725208f%3A0x421f6990112c3b0!2s78532%20Tuttlingen%2C%20Germany!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer"></footer>
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Create a simple notification
+                    const notification = document.createElement('div');
+                    notification.style.position = 'fixed';
+                    notification.style.top = '20px';
+                    notification.style.right = '20px';
+                    notification.style.background = 'var(--color-surface)';
+                    notification.style.color = 'var(--color-text)';
+                    notification.style.padding = '16px 24px';
+                    notification.style.borderRadius = '8px';
+                    notification.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1)';
+                    notification.style.borderLeft = '4px solid #2c6f44';
+                    notification.style.zIndex = '9999';
+                    notification.style.fontWeight = '500';
+                    notification.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #2c6f44; margin-right: 8px;"></i> நன்றி!உங்கள் செய்தி அனுப்பப்பட்டது.';
+
+                    document.body.appendChild(notification);
+
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                        notification.style.transition = 'opacity 0.5s';
+                        setTimeout(() => notification.remove(), 500);
+                    }, 4000);
+
+                    contactForm.reset();
+                });
+            }
+
+            // Tooltip functionality for footer links
+            const tooltipLinks = document.querySelectorAll('[data-tooltip]');
+
+            tooltipLinks.forEach(link => {
+                link.addEventListener('mouseenter', function (e) {
+                    const tooltip = document.createElement('span');
+                    tooltip.textContent = this.dataset.tooltip;
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.background = '#0f172a';
+                    tooltip.style.color = 'white';
+                    tooltip.style.padding = '6px 12px';
+                    tooltip.style.borderRadius = '4px';
+                    tooltip.style.fontSize = '0.75rem';
+                    tooltip.style.bottom = '100%';
+                    tooltip.style.left = '50%';
+                    tooltip.style.transform = 'translateX(-50%)';
+                    tooltip.style.whiteSpace = 'nowrap';
+                    tooltip.style.zIndex = '1000';
+                    tooltip.style.marginBottom = '8px';
+                    tooltip.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
+                    tooltip.classList.add('dynamic-tooltip');
+
+                    this.style.position = 'relative';
+                    this.appendChild(tooltip);
+                });
+
+                link.addEventListener('mouseleave', function () {
+                    const tooltip = this.querySelector('.dynamic-tooltip');
+                    if (tooltip) tooltip.remove();
+                });
+            });
+
+            // FAQ Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    document.querySelectorAll('.faq-item').forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    item.classList.toggle('active');
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
