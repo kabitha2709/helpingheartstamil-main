@@ -52,8 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll('.header-nav a');
 
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === path) {
+            const href = link.getAttribute('href') || '';
+            const hrefPath = href.split('#')[0].split('?')[0];
+            const match = hrefPath === path || (path === '' && (hrefPath === 'index.html' || hrefPath === ''));
+            if (match) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
