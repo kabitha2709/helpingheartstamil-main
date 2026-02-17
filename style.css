@@ -715,7 +715,8 @@ h6 {
     top: 100%;
     left: 0;
     background: var(--color-surface);
-    min-width: 240px;
+    min-width: 280px;
+    /* Slightly wider for the long names */
     box-shadow: var(--shadow-lg);
     border-radius: var(--radius-md);
     opacity: 0;
@@ -726,6 +727,10 @@ h6 {
     border-top: 3px solid var(--color-primary);
     list-style: none;
     padding: 0;
+    max-height: 400px;
+    /* Limit height */
+    overflow-y: auto;
+    /* Enable vertical scroll */
 }
 
 .menu>li:hover .dropdown {
@@ -1296,6 +1301,7 @@ h6 {
     grid-template-columns: 2fr 1fr;
     gap: 40px;
     margin-bottom: 64px;
+    padding-top: 50px;
 }
 
 /* ===== CONTENT & POSTS ===== */
@@ -1910,7 +1916,8 @@ h6 {
     display: flex;
     gap: 30px;
     width: max-content;
-    animation: scrollTestimonials 50s linear infinite;
+    /* Ensure track is wide enough for duplicate sets */
+    animation: scrollTestimonials 60s linear infinite;
 }
 
 .testimonial-track:hover {
@@ -3677,7 +3684,8 @@ h6 {
 }
 
 .hamburger-nav>li.active .hamburger-dropdown {
-    max-height: 500px;
+    max-height: 1000px;
+    /* Increased to accommodate more items */
 }
 
 .hamburger-nav>li.active .hamburger-item i {
@@ -3809,20 +3817,26 @@ h6 {
     .scroll-dropdown {
         display: none;
         list-style: none;
-        padding: 10px;
+        padding: 15px 10px 20px;
         margin: 0;
         position: fixed;
         top: 105px;
         /* Below the nav bar */
         left: 0;
         width: 100%;
+        max-height: calc(100vh - 110px);
+        /* prevent overflowing screen */
+        overflow-y: auto;
+        /* Allow scrolling within the dropdown if too tall */
         background: var(--color-surface);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         border-bottom: 2px solid var(--color-primary);
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+        gap: 10px;
     }
 
     .scroll-menu>li.active .scroll-dropdown {
@@ -3830,7 +3844,9 @@ h6 {
     }
 
     .scroll-dropdown li {
-        width: auto;
+        width: 100%;
+        max-width: 300px;
+        /* Limit width for better readability */
     }
 
     /* Remove Hero Section on mobile */
@@ -3880,14 +3896,24 @@ h6 {
 
     .scroll-dropdown li a {
         display: block;
-        padding: 8px 12px;
+        padding: 8px 14px;
         color: var(--color-text);
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         text-decoration: none;
         background: var(--color-primary-light);
         border-radius: 20px;
-        white-space: nowrap;
+        white-space: normal;
+        /* Allow wrapping for long names */
+        text-align: center;
         transition: var(--transition);
+        line-height: 1.3;
+        border: 1px solid transparent;
+    }
+
+    .scroll-dropdown li a:hover {
+        background: var(--color-primary);
+        color: #ffffff;
+        border-color: var(--color-primary);
     }
 }
 

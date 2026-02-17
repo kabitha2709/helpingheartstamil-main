@@ -146,7 +146,8 @@ function initNavigation() {
         document.body.style.overflow = '';
     }
 
-    // Hamburger dropdown toggle
+    // Hamburger dropdown toggle (Commented out to prevent conflict with inline onclick in header.html)
+    /*
     const hamburgerItems = document.querySelectorAll('.hamburger-item');
     hamburgerItems.forEach(item => {
         item.addEventListener('click', function (e) {
@@ -155,6 +156,7 @@ function initNavigation() {
             parent.classList.toggle('active');
         });
     });
+    */
 
     // Main nav click-based dropdown
     const menuItems = document.querySelectorAll('.menu > li > a');
