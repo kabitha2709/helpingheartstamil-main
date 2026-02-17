@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
     <title>HelpingHeartsTamil – உதவும் இதயங்கள்</title>
-    <meta name="description" content="Helping Hearts Foundation - உதவும் இதயங்கள் நிறுவனம், உண்மை, நேர்மை, ஒழுக்கம்" />
+    <meta name="description" content="Helping Hearts Foundation - உதவும் இதயங்கள் நிறுவனம், மனிதாபிமானத்திற்கு நீட்டும் இதயங்கள்" />
     <meta name="theme-color" content="#2c6f44" id="theme-color" />
 
     <!-- Fonts & Icons -->
@@ -22,259 +22,135 @@
 </head>
 
 <body data-theme="light">
-    <!-- Skip to Content (Accessibility) -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <!-- Floating Background Hearts -->
     <div class="floating-hearts-container" id="heartsContainer"></div>
 
-    <!-- Top bar (currently unused; header contains branding + search + theme toggle) -->
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-left">
                 <span>HelpingHeartsTamil – உதவும் இதயங்கள்</span>
             </div>
-            <div class="top-right">
-                <!-- Reserved for future use; content moved into header -->
-            </div>
+            <div class="top-right"></div>
         </div>
     </div>
 
-    <!-- Header -->
     <header class="site-header" id="header"></header>
 
-    <!-- Hero Slider -->
-    <section class="hero-slider">
-        <div class="slider-container">
-            <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&h=500&auto=format&fit=crop"
-                    alt="Education Assistance" class="slide-image">
-                <div class="slide-overlay"></div>
-                <div class="slide-content">
-                    <h2>கல்வி உதவித் திட்டம் 2024</h2>
-                    <p style="color: white; font-size: 1.2rem; margin-top: 10px;">1000+ மாணவர்களுக்கு உதவி</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&h=500&auto=format&fit=crop"
-                    alt="Medical Camp" class="slide-image">
-                <div class="slide-overlay"></div>
-                <div class="slide-content">
-                    <h2>மருத்துவ முகாம் வெற்றிகரமாக நடைபெற்றது</h2>
-                    <p style="color: white; font-size: 1.2rem; margin-top: 10px;">500+ பயனாளிகள்</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&h=500&auto=format&fit=crop"
-                    alt="Womens Union" class="slide-image">
-                <div class="slide-overlay"></div>
-                <div class="slide-content">
-                    <h2>மகளிர் ஒன்றிய புதிய திட்டங்கள்</h2>
-                    <p style="color: white; font-size: 1.2rem; margin-top: 10px;">தொழில் முயற்சி பயிற்சிகள்</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&h=500&auto=format&fit=crop"
-                    alt="Integrated Farm" class="slide-image">
-                <div class="slide-overlay"></div>
-                <div class="slide-content">
-                    <h2>ஒருங்கிணைந்த பண்ணை மாங்குளம் வளர்ச்சி</h2>
-                    <p style="color: white; font-size: 1.2rem; margin-top: 10px;">நிலையான விவசாயம்</p>
-                </div>
-            </div>
-
-            <button class="slider-nav prev" onclick="changeSlide(-1)" aria-label="Previous slide">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="slider-nav next" onclick="changeSlide(1)" aria-label="Next slide">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
-            <div class="slider-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+    <!-- Hero Banner (Udavum Karangal style - single impactful) -->
+    <section class="hero-banner">
+        <div class="hero-banner-overlay"></div>
+        <div class="hero-banner-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1400&h=600&auto=format&fit=crop');">
+        </div>
+        <div class="container hero-banner-content">
+            <h1 class="hero-banner-title">மனிதாபிமானத்திற்கு நீட்டும் இதயங்கள்</h1>
+            <p class="hero-banner-subtitle">உதவும் இதயங்கள் நிறுவனம் – தாயக உறவுகளுக்கு உண்மையாகவும் நேர்மையாகவும்
+                ஒழுக்கத்துடன் உதவி வருகிறோம்.</p>
         </div>
     </section>
 
-    <!-- Main layout -->
-    <div class="container layout" id="main-content">
-        <!-- Content -->
-        <main class="content">
-            <h2 class="section-title">சமீபத்திய செய்திகள்</h2>
+    <!-- What We Do / எமது செயல்திட்டங்கள் (Udavum Karangal style) -->
+    <section class="programs-section" id="main-content">
+        <div class="container">
+            <h2 class="section-title center">எமது செயல்திட்டங்கள்</h2>
+            <p class="section-intro">உதவும் இதயங்கள் நிறுவனம் அனைவருக்கும் அன்பு அளிக்கப்பட வேண்டும் என்று
+                நம்புகிறது. போரினாலும் அனர்த்தங்களாலும் பாதிக்கப்பட்ட தாயக உறவுகளுக்கு கல்வி, மருத்துவம்,
+                வாழ்வாதாரம் மற்றும் நிவாரண உதவிகள் வழங்கி வருகிறோம்.</p>
 
-            <article class="post-card horizontal animate-fade-up">
-                <div class="post-meta">
-                    <span class="post-date"><i class="fa-regular fa-calendar"></i> January 27, 2023</span>
-                    <span class="post-category"><i class="fa-regular fa-folder"></i> Helping Hearts News</span>
-                </div>
-                <div class="post-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1621360841013-c7683c659ec6?q=80&w=400&h=300&auto=format&fit=crop"
-                        alt="Pongal Festival" class="post-image">
-                </div>
-                <div class="post-content">
-                    <h3 class="post-title">
-                        எம் இனிய உறவுகளே! புது வருடம் மற்றும் பொங்கல் வாழ்த்துகள்
-                    </h3>
-                    <p class="post-excerpt">
-                        எம் இனிய உறவுகளே! எம்மோடு இணைந்து தாயக உறவுகளுக்கு உதவும் இதயங்களே!
-                        உங்கள் அனைவருக்கும் இனிய புது வருட வாழ்த்துக்களும், பொங்கல் வாழ்த்துக்களும் உரித்தாகட்டும்.
-                    </p>
-                    <a href="news_details.html" class="read-more">மேலும் படிக்க »</a>
-                </div>
-            </article>
+            <div class="program-grid">
+                <article class="program-card animate-fade-up">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="கல்வி உதவி">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">கல்வி உதவி</h3>
+                        <p class="program-card-desc">வறுமையில் வாழும் மாணவர்களுக்கு கல்வி உதவி, மாலை நேரக் கல்வி
+                            நிலையங்கள், சிறுவர் முன்பள்ளிகள் மற்றும் உயர்கல்வி வழிகாட்டுதல்.</p>
+                        <a href="aboutus.html#mission-vision" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-            <article class="post-card horizontal animate-fade-up" style="animation-delay: 0.05s;">
-                <div class="post-meta">
-                    <span class="post-date"><i class="fa-regular fa-calendar"></i> February 15, 2026</span>
-                    <span class="post-category"><i class="fa-regular fa-folder"></i> Helping Hearts News</span>
-                </div>
-                <div class="post-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1547683908-21aa53d93a04?q=80&w=400&h=300&auto=format&fit=crop"
-                        alt="Relief Work" class="post-image">
-                </div>
-                <div class="post-content">
-                    <h3 class="post-title">
-                        புயல் அனர்த்தத்தால் பாதிக்கப்பட்ட மக்களுக்கு உலர் உணவுப் பொருட்கள் வழங்கல்
-                    </h3>
-                    <p class="post-excerpt">
-                        ஜெர்மனி தமிழர் நட்சத்திர விளையாட்டுக் கழக இளைஞர்களின் நிதிப் பங்களிப்பில் மட்டக்களப்பு மற்றும்
-                        பதுளை
-                        மாவட்ட பசறை பிரதேசத்தில் 60 குடும்பங்களுக்கு உதவி வழங்கப்பட்டது.
-                    </p>
-                    <a href="news_flood_relief_2026.html" class="read-more">மேலும் படிக்க »</a>
-                </div>
-            </article>
+                <article class="program-card animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="மருத்துவ உதவி">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">மருத்துவ உதவி</h3>
+                        <p class="program-card-desc">மருத்துவ முகாம்கள், மருந்து வழங்கல், சுகாதார விழிப்புணர்வு மற்றும்
+                            கிராம மக்களுக்கான சுகாதார சேவைகள்.</p>
+                        <a href="aboutus.html#mission-vision" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-            <article class="post-card horizontal animate-fade-up" style="animation-delay: 0.1s;">
-                <div class="post-meta">
-                    <span class="post-date"><i class="fa-regular fa-calendar"></i> January 27, 2023</span>
-                    <span class="post-category"><i class="fa-regular fa-folder"></i> Helping Hearts Germany</span>
-                </div>
-                <div class="post-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&h=300&auto=format&fit=crop"
-                        alt="Preschool" class="post-image">
-                </div>
-                <div class="post-content">
-                    <h3 class="post-title">
-                        பின் தங்கிய சங்கமன்கிராமம் பகுதியில் சிறுவர் முன்பள்ளி
-                    </h3>
-                    <p class="post-excerpt">
-                        “கல்வியே எமது சிறார்களின் மூலதனம்”. பின் தங்கிய எல்லைக்கிராமமான
-                        சங்கமன்கிராமம் திருக்கோவில் பகுதியில் எமது சிறுவர் முன் பள்ளி
-                        சிறப்பாக இயங்கிக் கொண்டிருக்கிறது.
-                    </p>
-                    <a href="news_details.html" class="read-more">மேலும் படிக்க »</a>
-                </div>
-            </article>
+                <article class="program-card animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="வாழ்வாதார முன்நேற்றல்">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">வாழ்வாதார முன்நேற்றல்</h3>
+                        <p class="program-card-desc">தொழில் முயற்சி பயிற்சிகள், தையல் பயிற்சி, சுயதொழில் ஊக்குவிப்பு
+                            மற்றும் மகளிர் ஒன்றிய திட்டங்கள் மூலம் வாழ்வாதாரம் உயர்த்துதல்.</p>
+                        <a href="aboutus.html#mission-vision" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-            <article class="post-card horizontal animate-fade-up" style="animation-delay: 0.2s;">
-                <div class="post-meta">
-                    <span class="post-date"><i class="fa-regular fa-calendar"></i> January 24, 2023</span>
-                    <span class="post-category"><i class="fa-regular fa-folder"></i> Helping Hearts Germany</span>
-                </div>
-                <div class="post-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=400&h=300&auto=format&fit=crop"
-                        alt="Evening Class" class="post-image">
-                </div>
-                <div class="post-content">
-                    <h3 class="post-title">
-                        மாலை நேரக் கல்வி நிலையம் பொத்துவில் ஊறணியில் பொங்கல் விழா
-                    </h3>
-                    <p class="post-excerpt">
-                        உதவும் இதயங்கள் நிறுவனத்தின் மாலை நேரக் கல்வி நிலையம் பொத்துவில்
-                        ஊறணி என்னும் கிராமத்தில் மாணவர்கள், பெற்றோர்கள் கலந்து கொண்ட
-                        பொங்கல் விழாவின் சில தருணங்கள்.
-                    </p>
-                    <a href="news_details.html" class="read-more">மேலும் படிக்க »</a>
-                </div>
-            </article>
+                <article class="program-card animate-fade-up" style="animation-delay: 0.3s;">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1547683908-21aa53d93a04?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="நிவாரண உதவி">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">நிவாரண உதவி</h3>
+                        <p class="program-card-desc">புயல், வெள்ளம் மற்றும் இயற்கை அழிவுகளால் பாதிக்கப்பட்ட
+                            குடும்பங்களுக்கு உணவு, உடை மற்றும் அத்தியாவசிய உதவிகள் வழங்குதல்.</p>
+                        <a href="news_flood_relief_2026.html" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-            <article class="post-card horizontal animate-fade-up" style="animation-delay: 0.3s;">
-                <div class="post-meta">
-                    <span class="post-date"><i class="fa-regular fa-calendar"></i> January 22, 2023</span>
-                    <span class="post-category"><i class="fa-regular fa-folder"></i> Helping Hearts News</span>
-                </div>
-                <div class="post-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=400&h=300&auto=format&fit=crop"
-                        alt="Providing Food" class="post-image">
-                </div>
-                <div class="post-content">
-                    <h3 class="post-title">
-                        சிறுவர் இல்லக் குழந்தைகளுக்கு உணவு வழங்கியமை – பிறந்தநாள் உதவி
-                    </h3>
-                    <p class="post-excerpt">
-                        பழுகாமம் மற்றும் காந்தி சிறுவர் இல்லக் குழந்தைகளுக்கு உணவு வழங்கி
-                        வைக்கப்பட்டது. நன்கொடையாளர்களின் அன்பிற்கும் கருணைக்கும் எங்கள் மனமார்ந்த நன்றிகள்.
-                    </p>
-                    <a href="#" class="read-more">மேலும் படிக்க »</a>
-                </div>
-            </article>
+                <article class="program-card animate-fade-up" style="animation-delay: 0.4s;">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="சிறுவர் உதவி">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">சிறுவர் முன்பள்ளி</h3>
+                        <p class="program-card-desc">பின் தங்கிய பகுதிகளில் சிறுவர் முன்பள்ளிகள், சிறுவர் இல்ல
+                            உதவிகள் மற்றும் குழந்தைகளின் கல்விக்கு பிறந்தநாள் உதவி திட்டங்கள்.</p>
+                        <a href="aboutus.html#mission-vision" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-            <div class="pagination">
-                <a href="#" class="page-link current">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link next-btn">Next »</a>
+                <article class="program-card animate-fade-up" style="animation-delay: 0.5s;">
+                    <div class="program-card-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&h=400&auto=format&fit=crop"
+                            alt="ஒருங்கிணைந்த பண்ணை">
+                        <div class="program-card-overlay"></div>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">ஒருங்கிணைந்த பண்ணை மாங்குளம்</h3>
+                        <p class="program-card-desc">நிலையான விவசாயம், வீட்டுத் திட்டங்கள் மற்றும் கிராம வளர்ச்சிக்கான
+                            ஒருங்கிணைந்த முயற்சிகள்.</p>
+                        <a href="aboutus.html#mission-vision" class="program-card-link">மேலும் அறிய <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
-        </main>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <section class="widget">
-                <h3 class="widget-title">மாவட்டரீதியாக</h3>
-                <ul class="link-list">
-                    <li><a href="#">அம்பாறை</a></li>
-                    <li><a href="#">கிளிநொச்சி</a></li>
-                    <li><a href="#">திருகோணமலை</a></li>
-                    <li><a href="#">மட்டக்களப்பு</a></li>
-                    <li><a href="#">மன்னார்</a></li>
-                    <li><a href="#">முல்லைத்தீவு</a></li>
-                    <li><a href="#">யாழ்ப்பாணம்</a></li>
-                    <li><a href="#">வவுனியா</a></li>
-                    <li><a href="#">மலையகம்</a></li>
-                    <li><a href="#">மேலும்</a></li>
-                </ul>
-            </section>
-
-            <section class="widget">
-                <h3 class="widget-title">எமது பங்கு</h3>
-                <ul class="link-list">
-                    <li><a href="#">தொழில் முயற்சி</a></li>
-                    <li><a href="#">கல்விசார் முயற்சி</a></li>
-                    <li><a href="#">வாழ்வாதார முன்நேற்றல்</a></li>
-                    <li><a href="#">பண உதவிகள்</a></li>
-                    <li><a href="#">வீட்டுத்திட்டம்</a></li>
-                    <li><a href="#">மாணவர்களுக்கான உதவி</a></li>
-                    <li><a href="#">ஏனைய சேவைகள்</a></li>
-                </ul>
-            </section>
-
-            <section class="widget">
-                <h3 class="widget-title">வருடாந்த அட்டவணை</h3>
-                <div class="chip-row">
-                    <span class="chip">2026</span>
-                    <span class="chip">2025</span>
-                    <span class="chip">2024</span>
-                    <span class="chip">2023</span>
-                    <span class="chip">2022</span>
-                </div>
-            </section>
-
-            <!-- <section class="widget">
-                <h3 class="widget-title">காணொளிகள்</h3>
-                <div class="video-thumb">
-                    <div class="video-placeholder" data-tooltip="Play video"></div>
-                    <p class="video-caption">
-                        <strong>கிளிநொச்சி முகமாலையில் சுய தொழில் ஊக்குவிப்பாளர்களுக்கான பயிற்சிநெறி</strong>
-                    </p>
-                    <a href="#" class="read-more">YouTube ல் காண »</a>
-                </div>
-            </section> -->
-        </aside>
-    </div>
+        </div>
+    </section>
 
     <!-- Stats Section -->
     <section class="stats-section">
@@ -300,44 +176,38 @@
         </div>
     </section>
 
-    <!-- Countdown Section -->
-    <section class="container">
-        <h2 class="section-title">அடுத்த நிகழ்வு</h2>
-        <div class="countdown-container">
-            <div class="countdown-box">
-                <div class="countdown-number" id="days">25</div>
-                <div class="countdown-label">நாட்கள்</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="hours">10</div>
-                <div class="countdown-label">மணிகள்</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="minutes">30</div>
-                <div class="countdown-label">நிமிடங்கள்</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="seconds">45</div>
-                <div class="countdown-label">விநாடிகள்</div>
+    <!-- How You Can Help / உதவுவது எப்படி (Udavum Karangal - GIVE A HAND style) -->
+    <section class="help-cta-section">
+        <div class="container">
+            <h2 class="section-title center">உதவுவது எப்படி</h2>
+            <p class="section-intro">எங்களோடு இணைந்து தாயக உறவுகளுக்கு உதவுங்கள்</p>
+            <div class="help-cta-grid">
+                <a href="contact.html" class="help-cta-card donate-cta">
+                    <div class="help-cta-icon"><i class="fas fa-heart"></i></div>
+                    <h3>நன்கொடை அளியுங்கள்</h3>
+                    <p>உங்கள் பங்களிப்பு பயனாளிகளின் வாழ்வை மாற்றும்</p>
+                    <span class="help-cta-btn">Donate <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="contact.html" class="help-cta-card volunteer-cta">
+                    <div class="help-cta-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>தன்னார்வலராக இணையுங்கள்</h3>
+                    <p>உங்கள் நேரத்தையும் திறனையும் பகிர்ந்து கொள்ளுங்கள்</p>
+                    <span class="help-cta-btn">தொடர்பு கொள்ளுங்கள் <i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 20px; font-size: 1.2rem;">வருடாந்த பொது கூட்டம் 2026</p>
     </section>
 
-    <!-- feedback Section -->
+    <!-- BE INSPIRED / பயனாளிகள் சொல்லும் -->
     <section class="testimonial-section">
         <div class="container" style="overflow: visible;">
-            <h2 class="section-title" style="color: var(--color-primary-dark);">பயனாளிகள் சொல்லும் வாழ்த்து</h2>
+            <h2 class="section-title center" style="color: var(--color-primary-dark);">பயனாளிகள் சொல்லும் வாழ்த்து</h2>
             <div class="testimonial-wrapper">
                 <div class="testimonial-track">
-                    <!-- Original Feedbacks -->
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"உதவும் இதயங்கள் நிறுவனத்தின் கல்வி உதவியால் என் மகள் மருத்துவம்
-                            படிக்க
-                            முடிந்தது. அவர்களின் உதவி மறக்க முடியாதது."</p>
+                        <p class="testimonial-text">"உதவும் இதயங்கள் நிறுவனத்தின் கல்வி உதவியால் என் மகள் மருத்துவம் படிக்க முடிந்தது. அவர்களின் உதவி மறக்க முடியாதது."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>சரஸ்வதி துரைராஜா</h4>
                                 <p>யாழ்ப்பாணம்</p>
@@ -345,12 +215,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"வாழ்வாதார உதவி திட்டத்தின் மூலம் எனது சிறிய தொழிலை ஆரம்பித்தேன்.
-                            இன்று
-                            5 பேருக்கு வேலைவாய்ப்பு அளித்துள்ளேன்."</p>
+                        <p class="testimonial-text">"வாழ்வாதார உதவி திட்டத்தின் மூலம் எனது சிறிய தொழிலை ஆரம்பித்தேன். இன்று 5 பேருக்கு வேலைவாய்ப்பு அளித்துள்ளேன்."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>கணேஷ் லிங்கம்</h4>
                                 <p>மட்டக்களப்பு</p>
@@ -358,11 +225,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"மாலை நேர கல்வி நிலையம் என் குழந்தைகளின் எதிர்காலத்தை மாற்றியுள்ளது.
-                            நன்றி உதவும் இதயங்கள்!"</p>
+                        <p class="testimonial-text">"மாலை நேர கல்வி நிலையம் என் குழந்தைகளின் எதிர்காலத்தை மாற்றியுள்ளது. நன்றி உதவும் இதயங்கள்!"</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>ராஜேஸ்வரி சண்முகம்</h4>
                                 <p>திருகோணமலை</p>
@@ -370,11 +235,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"எங்கள் கிராமத்திற்கு தண்ணீர் வசதி செய்து கொடுத்தமைக்கு மிக்க
-                            நன்றிகள். விவசாயப் பணிகளுக்கு இது மிக உதவியாக உள்ளது."</p>
+                        <p class="testimonial-text">"எங்கள் கிராமத்திற்கு தண்ணீர் வசதி செய்து கொடுத்தமைக்கு மிக்க நன்றிகள். விவசாயப் பணிகளுக்கு இது மிக உதவியாக உள்ளது."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>கதிரவன் கந்தசாமி</h4>
                                 <p>கிளிநொச்சி</p>
@@ -382,11 +245,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"தையல் பயிற்சி வகுப்பின் மூலம் இன்று நான் ஒரு சுயதொழில் செய்பவராக
-                            மாறியுள்ளேன். எமது வாழ்வாதாரம் உயர்ந்துள்ளது."</p>
+                        <p class="testimonial-text">"தையல் பயிற்சி வகுப்பின் மூலம் இன்று நான் ஒரு சுயதொழில் செய்பவராக மாறியுள்ளேன். எமது வாழ்வாதாரம் உயர்ந்துள்ளது."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>செல்வி தர்சிகா</h4>
                                 <p>வவுனியா</p>
@@ -394,26 +255,20 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"மனிதாபிமான அடிப்படையில் எவ்வித வேறுபாடுமின்றி எமக்கு உதவிய உதவும்
-                            இதயங்களுக்கு எனது மனமார்ந்த நன்றிகள்."</p>
+                        <p class="testimonial-text">"மனிதாபிமான அடிப்படையில் எவ்வித வேறுபாடுமின்றி எமக்கு உதவிய உதவும் இதயங்களுக்கு எனது மனமார்ந்த நன்றிகள்."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>அப்துல் ரஹ்மான்</h4>
-                                <p>மன்னாார்</p>
+                                <p>மன்னார்</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Duplicated Feedbacks for Infinite Loop -->
+                    <!-- Duplicates for infinite loop -->
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"உதவும் இதயங்கள் நிறுவனத்தின் கல்வி உதவியால் என் மகள் மருத்துவம்
-                            படிக்க
-                            முடிந்தது. அவர்களின் உதவி மறக்க முடியாதது."</p>
+                        <p class="testimonial-text">"உதவும் இதயங்கள் நிறுவனத்தின் கல்வி உதவியால் என் மகள் மருத்துவம் படிக்க முடிந்தது. அவர்களின் உதவி மறக்க முடியாதது."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>சரஸ்வதி துரைராஜா</h4>
                                 <p>யாழ்ப்பாணம்</p>
@@ -421,63 +276,12 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">"வாழ்வாதார உதவி திட்டத்தின் மூலம் எனது சிறிய தொழிலை ஆரம்பித்தேன்.
-                            இன்று
-                            5 பேருக்கு வேலைவாய்ப்பு அளித்துள்ளேன்."</p>
+                        <p class="testimonial-text">"வாழ்வாதார உதவி திட்டத்தின் மூலம் எனது சிறிய தொழிலை ஆரம்பித்தேன். இன்று 5 பேருக்கு வேலைவாய்ப்பு அளித்துள்ளேன்."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop" alt="Author" class="author-avatar">
                             <div class="author-info">
                                 <h4>கணேஷ் லிங்கம்</h4>
                                 <p>மட்டக்களப்பு</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"மாலை நேர கல்வி நிலையம் என் குழந்தைகளின் எதிர்காலத்தை மாற்றியுள்ளது.
-                            நன்றி உதவும் இதயங்கள்!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
-                            <div class="author-info">
-                                <h4>ராஜேஸ்வரி சண்முகம்</h4>
-                                <p>திருகோணமலை</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"எங்கள் கிராமத்திற்கு தண்ணீர் வசதி செய்து கொடுத்தமைக்கு மிக்க
-                            நன்றிகள். விவசாயப் பணிகளுக்கு இது மிக உதவியாக உள்ளது."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
-                            <div class="author-info">
-                                <h4>கதிரவன் கந்தசாமி</h4>
-                                <p>கிளிநொச்சி</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"தையல் பயிற்சி வகுப்பின் மூலம் இன்று நான் ஒரு சுயதொழில் செய்பவராக
-                            மாறியுள்ளேன். எமது வாழ்வாதாரம் உயர்ந்துள்ளது."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
-                            <div class="author-info">
-                                <h4>செல்வி தர்சிகா</h4>
-                                <p>வவுனியா</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"மனிதாபிமான அடிப்படையில் எவ்வித வேறுபாடுமின்றி எமக்கு உதவிய உதவும்
-                            இதயங்களுக்கு எனது மனமார்ந்த நன்றிகள்."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop"
-                                alt="Author" class="author-avatar">
-                            <div class="author-info">
-                                <h4>அப்துல் ரஹ்மான்</h4>
-                                <p>மன்னாார்</p>
                             </div>
                         </div>
                     </div>
@@ -486,69 +290,22 @@
         </div>
     </section>
 
+    <!-- News & Events (compact - link to news page) -->
+    <!-- <section class="news-preview-section">
+        <div class="container">
+            <h2 class="section-title center">சமீபத்திய செய்திகள்</h2>
+            <p class="section-intro">உதவும் இதயங்களின் சமீப நிகழ்வுகள் மற்றும் செய்திகளை அறிய கீழே கிளிக் செய்யுங்கள்.</p>
+            <div class="news-preview-cta">
+                <a href="news.html" class="news-preview-btn">எல்லா செய்திகளையும் காண <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section> -->
+
     <footer class="site-footer"></footer>
 
-    <!-- Notification -->
     <div id="notification" class="notification">
         <p id="notification-message">Welcome to Helping Hearts Tamil!</p>
     </div>
-
-    <script>
-        // ===== SLIDER FUNCTIONALITY =====
-        let currentSlideIndex = 0;
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-
-            if (slides.length === 0) return;
-
-            if (index >= slides.length) {
-                currentSlideIndex = 0;
-            } else if (index < 0) {
-                currentSlideIndex = slides.length - 1;
-            } else {
-                currentSlideIndex = index;
-            }
-
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            slides[currentSlideIndex].classList.add('active');
-            dots[currentSlideIndex].classList.add('active');
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlideIndex + direction);
-            resetAutoSlide();
-        }
-
-        function currentSlide(index) {
-            showSlide(index);
-            resetAutoSlide();
-        }
-
-        function autoSlide() {
-            currentSlideIndex++;
-            showSlide(currentSlideIndex);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(autoSlide, 5000);
-        }
-
-        // Initialize slider on load
-        document.addEventListener('DOMContentLoaded', function () {
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        });
-
-        window.addEventListener('beforeunload', function () {
-            clearInterval(autoSlideInterval);
-        });
-    </script>
 </body>
 
 </html>

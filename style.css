@@ -862,6 +862,347 @@ h6 {
     border-radius: 6px;
 }
 
+/* ===== HERO BANNER (Udavum Karangal style) ===== */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 48px;
+}
+
+.hero-banner-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(44, 111, 68, 0.85) 0%, rgba(41, 173, 69, 0.75) 100%);
+    z-index: 1;
+}
+
+.hero-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.hero-banner-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.hero-banner-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== PROGRAMS SECTION (Udavum Karangal WHAT WE DO style) ===== */
+.programs-section {
+    padding: 48px 0 64px;
+    background: var(--color-bg);
+}
+
+.section-title.center {
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title.center::after {
+    display: none;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.program-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+.program-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.program-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.program-card:hover .program-card-image img {
+    transform: scale(1.08);
+}
+
+.program-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 50%);
+    pointer-events: none;
+}
+
+.program-card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card-title {
+    font-size: 1.35rem;
+    margin: 0 0 12px;
+    color: var(--color-primary-dark);
+}
+
+.program-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+.program-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.program-card-link:hover {
+    color: var(--color-primary-dark);
+    gap: 12px;
+}
+
+/* ===== HELP CTA SECTION (Udavum Karangal GIVE A HAND style) ===== */
+.help-cta-section {
+    padding: 56px 0;
+    background: var(--color-primary-light);
+}
+
+[data-theme="dark"] .help-cta-section {
+    background: rgba(72, 189, 113, 0.08);
+}
+
+.help-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.help-cta-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px;
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.help-cta-card.donate-cta {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+.help-cta-card.donate-cta:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.help-cta-card.volunteer-cta {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border-color: var(--color-primary);
+}
+
+.help-cta-card.volunteer-cta:hover {
+    border-color: var(--color-primary-dark);
+    background: var(--color-primary-light);
+    transform: translateY(-4px);
+}
+
+.help-cta-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.help-cta-card h3 {
+    font-size: 1.35rem;
+    margin: 0 0 8px;
+}
+
+.help-cta-card p {
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+    opacity: 0.9;
+}
+
+.volunteer-cta p {
+    color: var(--color-text-muted);
+}
+
+.help-cta-btn {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== NEWS PREVIEW SECTION ===== */
+.news-preview-section {
+    padding: 48px 0 64px;
+}
+
+.news-preview-cta {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.news-preview-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.news-preview-btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ===== PROGRAM & HERO RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-banner-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 320px;
+        margin-bottom: 32px;
+    }
+
+    .hero-banner-title {
+        font-size: 1.65rem;
+    }
+
+    .hero-banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .programs-section {
+        padding: 32px 0 48px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .program-card-image {
+        height: 180px;
+    }
+
+    .program-card-body {
+        padding: 20px;
+    }
+
+    .help-cta-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .help-cta-card {
+        padding: 32px 24px;
+    }
+
+    .help-cta-icon {
+        font-size: 2rem;
+    }
+
+    .news-preview-section {
+        padding: 32px 0 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        min-height: 280px;
+    }
+
+    .hero-banner-title {
+        font-size: 1.4rem;
+    }
+
+    .program-card-title {
+        font-size: 1.2rem;
+    }
+}
+
 /* ===== MAIN LAYOUT ===== */
 .layout {
     display: grid;
