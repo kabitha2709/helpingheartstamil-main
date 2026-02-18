@@ -212,7 +212,7 @@ h6 {
 }
 
 .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse {
@@ -221,6 +221,52 @@ h6 {
 
 .animate-fade-up {
     animation: fadeInUp 0.8s ease-out;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Specific text entrance for headings */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-text.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== SKIP TO CONTENT (ACCESSIBILITY) ===== */
@@ -296,7 +342,6 @@ h6 {
 .theme-toggle {
     display: flex;
     align-items: center;
-    margin-left: 16px;
 }
 
 .theme-toggle-btn {
@@ -329,7 +374,6 @@ h6 {
 .search-container {
     display: flex;
     align-items: center;
-    margin-left: 16px;
     position: relative;
 }
 
@@ -389,7 +433,7 @@ h6 {
 .search-container.active .search-input:focus {
     background: white;
     border-color: var(--color-primary-dark);
-    width: 250px;
+    width: 200px;
     box-shadow: 0 0 0 3px rgba(72, 189, 113, 0.2);
 }
 
@@ -475,6 +519,8 @@ h6 {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
+    border-top: none;
+    box-shadow: none;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -503,13 +549,31 @@ h6 {
 
 .logo-img {
     height: 55px;
-    width: auto;
-    object-fit: contain;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-shadow: none;
     transition: var(--transition);
+    animation: logo-float 4s ease-in-out infinite;
 }
 
 .logo-img:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: scale(1.05) translateY(-2px);
+    animation-play-state: paused;
+}
+
+@keyframes logo-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
 }
 
 .site-tagline {
@@ -604,14 +668,15 @@ h6 {
 }
 
 .nav-text-link.nav-donate {
-    background: var(--color-primary);
-    color: #ffffff !important;
+    background: #ffffff;
+    color: var(--color-primary) !important;
     margin-left: 4px;
+    border: 1px solid var(--color-primary);
 }
 
 .nav-text-link.nav-donate:hover {
-    background: var(--color-primary-dark);
-    color: #ffffff !important;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark) !important;
 }
 
 .nav-dropdown-wrap {
@@ -958,18 +1023,22 @@ h6 {
 .hero-banner {
     position: relative;
     width: 100%;
-    min-height: 420px;
+    height: auto;
+    min-height: 500px;
+    /* Increased to show more image */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
+    /* Reduced margin */
 }
 
 .hero-banner-bg {
     position: absolute;
     inset: 0;
-    background-size: cover;
+    background-size: 100% 100%;
+    /* Show full image width and height */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -977,7 +1046,7 @@ h6 {
 .hero-banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(44, 111, 68, 0.85) 0%, rgba(41, 173, 69, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(72, 189, 113, 0.6) 0%, rgba(44, 111, 68, 0.5) 100%);
     z-index: 1;
 }
 
@@ -3402,8 +3471,8 @@ h6 {
 
 /* Header Donate Button Styles */
 .donate-btn-header {
-    background: var(--color-primary);
-    color: white;
+    background: #ffffff;
+    color: var(--color-primary);
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
@@ -3413,13 +3482,13 @@ h6 {
     align-items: center;
     gap: 8px;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 2px solid var(--color-primary);
 }
 
 .donate-btn-header:hover {
-    background: white;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -3461,7 +3530,8 @@ h6 {
     .header-controls {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 8px;
+        /* Reduced gap */
     }
 
     .search-input {
@@ -3477,6 +3547,7 @@ h6 {
     .site-top-bar {
         background: var(--color-primary-light);
         border-bottom: 1px solid var(--color-border);
+        border-top: none;
         padding: 10px 0;
         font-size: 0.85rem;
         color: var(--color-text-muted);
@@ -3542,13 +3613,20 @@ h6 {
     }
 
     .search-input {
-        width: 250px !important;
+        width: 160px !important;
+        /* Smaller width for desktop */
         opacity: 1 !important;
         border: 1px solid var(--color-border) !important;
-        padding: 8px 15px !important;
+        padding: 5px 12px !important;
+        /* Slightly more compact padding */
         padding-right: 35px !important;
         border-radius: 20px !important;
         background: var(--color-surface) !important;
+    }
+
+    .search-input::placeholder {
+        color: var(--color-text-muted) !important;
+        /* Ensure placeholder is visible */
     }
 
     [data-theme="dark"] .search-input {
@@ -3998,4 +4076,113 @@ h6 {
         height: 40px;
         font-size: 0.9rem;
     }
+}
+
+/* =========================================
+   NEW HEADER STYLES (STICKY TOP BAR)
+   ========================================= */
+.site-top-bar {
+    background: var(--color-primary-light);
+    color: var(--color-text);
+    font-size: 0.875rem;
+    padding: 8px 0;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid var(--color-border);
+    border-top: none;
+    box-shadow: none;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.social-link-icon {
+    color: var(--color-primary-dark);
+    font-size: 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin-left: 0;
+}
+
+.social-link-icon:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .site-top-bar {
+    background: #0f172a;
+    color: #f8fafc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .social-link-icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .social-link-icon:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* Mobile Header Top Styles */
+.mobile-header-top {
+    background: var(--color-primary-light);
+    border-bottom: 1px solid var(--color-border);
+    padding: 8px 0;
+}
+
+[data-theme="dark"] .mobile-header-top {
+    background: #0f172a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-header-top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-donate-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mobile-header-social-wrap {
+    display: flex;
+    gap: 10px;
 }

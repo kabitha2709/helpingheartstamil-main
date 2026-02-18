@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize Global Floating Hearts
     initFloatingHearts();
 
+    // Initialize Global Scroll Reveal
+    initScrollReveal();
+
     /**
      * Highlights the active link in the navigation based on the current URL
      */
@@ -103,6 +106,42 @@ document.addEventListener("DOMContentLoaded", function () {
         heart.addEventListener('animationiteration', () => {
             heart.style.left = Math.random() * 100 + 'vw';
         });
+    }
+
+    /**
+     * Handles scroll reveal animations using Intersection Observer
+     */
+    function initScrollReveal() {
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-text');
+
+        if (revealElements.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.05, // Lower threshold to ensure even small elements trigger
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Small timeout to ensure layout is complete before observing
+        setTimeout(() => {
+            revealElements.forEach(el => {
+                // If element is already in viewport, show it immediately
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                } else {
+                    observer.observe(el);
+                }
+            });
+        }, 100);
     }
 });
 

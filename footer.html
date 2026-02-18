@@ -119,6 +119,13 @@
             </div>
             <span>அறிமுகம்</span>
         </a>
+        <!-- <a href="donate.html" class="neo-item" title="நன்கொடை" data-nav="donate">
+            <div class="neo-icon icon-donate">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <span>நன்கொடை</span>
+        </a> -->
+
         <a href="team.html" class="neo-item" title="மேலாண்மைக்குழு" data-nav="team">
             <div class="neo-icon icon-team">
                 <i class="fa-solid fa-users-gear"></i>
@@ -150,14 +157,29 @@
         --shadow-light: #ffffff;
         --text-color: #4a5a4a;
         --text-light: #6b7e6b;
-        
+
         /* All icons now use green shades */
-        --icon-home: #48bd71;        /* Primary green for home */
-        --icon-news: #41ad45;         /* Dark green for news */
-        --icon-info: #3a5a40;         /* Accent green for info */
-        --icon-team: #4CAF50;         /* Fresh green for team */
-        --icon-reports: #2E7D32;       /* Forest green for reports */
-        --icon-contact: #66BB6A;       /* Light green for contact */
+        --icon-home: #48bd71;
+        /* Primary green for home */
+        --icon-news: #41ad45;
+        /* Dark green for news */
+        --icon-info: #41ad45;
+        --icon-donate: #3a5a40;
+        --icon-team: #4CAF50;
+        /* Fresh green for team */
+        --icon-reports: #2E7D32;
+        /* Forest green for reports */
+        --icon-contact: #66BB6A;
+        /* Light green for contact */
+    }
+
+    /* Dark Mode Variables */
+    [data-theme="dark"] {
+        --bg-color: #1a1c1a;
+        --shadow-dark: #0d0e0d;
+        --shadow-light: #252825;
+        --text-color: #e0e0e0;
+        --text-light: #a0a0a0;
     }
 
     .neo-footer {
@@ -166,10 +188,11 @@
         left: 0;
         right: 0;
         background: var(--bg-color);
-        padding: 16px 12px 12px 12px;
-        box-shadow: 0 -8px 20px rgba(58, 90, 64, 0.08);
+        padding: 10px 12px 2px 10px;
+        box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.2);
         z-index: 1000;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .neo-nav {
@@ -180,8 +203,9 @@
         margin: 0 auto;
         background: var(--bg-color);
         border-radius: 50px;
-        padding: 8px 12px;
-        gap: 8px;
+        padding: 6px 10px;
+        gap: 6px;
+        transition: background-color 0.3s ease;
     }
 
     .neo-item {
@@ -193,12 +217,13 @@
         transition: all 0.3s ease;
         flex: 1;
         position: relative;
-        padding: 4px 0;
+        padding: 2px 0 0 0;
+        /* Removed bottom padding */
     }
 
     .neo-icon {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,76 +232,99 @@
         box-shadow: 7px 7px 14px var(--shadow-dark),
             -7px -7px 14px var(--shadow-light);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        margin-bottom: 8px;  /* Slightly increased margin */
+        margin-bottom: 5px;
+        /* Reduced from 8px */
         position: relative;
         overflow: hidden;
     }
 
-    /* Green backgrounds for all icons */
+    /* White to Green gradients for all icons */
     .icon-home {
-        background: linear-gradient(145deg, var(--icon-home), #2E7D32);
-    }
-    
-    .icon-news {
-        background: linear-gradient(145deg, var(--icon-news), #2E7D32);
-    }
-    
-    .icon-info {
-        background: linear-gradient(145deg, var(--icon-info), #2E7D32);
-    }
-    
-    .icon-team {
-        background: linear-gradient(145deg, var(--icon-team), #2E7D32);
-    }
-    
-    .icon-reports {
-        background: linear-gradient(145deg, var(--icon-reports), #1B5E20);
-    }
-    
-    .icon-contact {
-        background: linear-gradient(145deg, var(--icon-contact), #2E7D32);
+        background: linear-gradient(145deg, #ffffff, var(--icon-home));
     }
 
-    /* Make icons white on colored backgrounds */
+    .icon-news {
+        background: linear-gradient(145deg, #ffffff, var(--icon-news));
+    }
+
+    .icon-info {
+        background: linear-gradient(145deg, #ffffff, var(--icon-info));
+    }
+
+    .icon-donate {
+        background: linear-gradient(145deg, #ffffff, var(--icon-donate));
+    }
+
+    .icon-team {
+        background: linear-gradient(145deg, #ffffff, var(--icon-team));
+    }
+
+    .icon-reports {
+        background: linear-gradient(145deg, #ffffff, var(--icon-reports));
+    }
+
+    .icon-contact {
+        background: linear-gradient(145deg, #ffffff, var(--icon-contact));
+    }
+
+    /* Darker icon color for better visibility on white gradient */
     .neo-icon i {
-        font-size: 22px;  /* Increased icon size */
-        color: white;
+        font-size: 18px;
+        /* Reduced from 22px */
+        color: var(--text-color);
         transition: all 0.3s ease;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    }
+
+    [data-theme="dark"] .neo-icon {
+        background: var(--bg-color);
+        box-shadow: 5px 5px 10px var(--shadow-dark),
+            -5px -5px 10px var(--shadow-light);
+    }
+
+    /* Dark mode labels */
+    [data-theme="dark"] .neo-item span {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
     }
 
     .neo-item span {
-        font-size: 11px;  /* Increased from 10px to 12px */
-        font-weight: 600;  /* Made slightly bolder */
+        font-size: 10px;
+        /* Reduced from 11px */
+        font-weight: 600;
         color: var(--text-light);
         transition: all 0.3s ease;
         letter-spacing: 0.3px;
-        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);  /* Added subtle text shadow */
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
     }
 
     /* Active State - Enhanced green background */
     .neo-item.active .neo-icon {
-        box-shadow: 0 10px 20px rgba(72, 189, 113, 0.3);  /* Green shadow for active state */
+        box-shadow: 0 10px 20px rgba(72, 189, 113, 0.3);
+        /* Green shadow for active state */
         transform: translateY(-2px);
-        background: linear-gradient(145deg, #48bd71, #1B5E20);  /* Brighter green when active */
+        background: linear-gradient(145deg, #48bd71, #1B5E20);
+        /* Brighter green when active */
     }
 
     .neo-item.active i {
         color: #ffffff;
-        font-size: 24px;  /* Larger icon when active */
+        font-size: 20px;
+        /* Reduced from 24px */
         filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
     }
 
     .neo-item.active span {
         color: var(--color-primary);
         font-weight: 700;
-        font-size: 13px;  /* Slightly larger when active */
+        font-size: 11px;
+        /* Reduced from 13px */
     }
 
     /* Hover Effects */
     .neo-item:hover .neo-icon {
         transform: translateY(-3px);
-        box-shadow: 0 15px 25px rgba(72, 189, 113, 0.25);  /* Green shadow on hover */
+        box-shadow: 0 15px 25px rgba(72, 189, 113, 0.25);
+        /* Green shadow on hover */
     }
 
     .neo-item:hover i {
@@ -286,7 +334,8 @@
 
     .neo-item:hover span {
         color: var(--color-primary-dark);
-        font-size: 13px;  /* Slightly larger on hover */
+        font-size: 11px;
+        /* Reduced from 13px */
     }
 
     /* Click/Tap Effect */
@@ -307,8 +356,10 @@
         bottom: -2px;
         left: 50%;
         transform: translateX(-50%);
-        width: 25px;  /* Slightly wider indicator */
-        height: 4px;  /* Slightly taller */
+        width: 25px;
+        /* Slightly wider indicator */
+        height: 4px;
+        /* Slightly taller */
         background: var(--color-primary);
         border-radius: 4px;
         animation: slideIn 0.3s ease;
@@ -329,29 +380,29 @@
     /* Responsive adjustments - updated for larger text */
     @media (max-width: 380px) {
         .neo-icon {
-            width: 44px;  /* Slightly smaller but still good */
-            height: 44px;
+            width: 36px;
+            height: 36px;
         }
 
         .neo-item i {
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .neo-item span {
-            font-size: 11px;  /* Still larger than original */
+            font-size: 9px;
         }
 
         .neo-item.active i {
-            font-size: 22px;
+            font-size: 18px;
         }
-        
+
         .neo-item.active span {
-            font-size: 12px;
+            font-size: 10px;
         }
 
         .neo-nav {
-            gap: 4px;
-            padding: 8px 8px;
+            gap: 2px;
+            padding: 4px 6px;
         }
     }
 
@@ -383,11 +434,13 @@
         top: -30px;
         left: 50%;
         transform: translateX(-50%);
-        background: var(--color-primary);  /* Green background */
+        background: var(--color-primary);
+        /* Green background */
         color: white;
         padding: 4px 8px;
         border-radius: 4px;
-        font-size: 11px;  /* Slightly larger tooltip */
+        font-size: 11px;
+        /* Slightly larger tooltip */
         white-space: nowrap;
         z-index: 1001;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -401,7 +454,8 @@
         transform: translateX(-50%);
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-        border-top: 6px solid var(--color-primary);  /* Green arrow */
+        border-top: 6px solid var(--color-primary);
+        /* Green arrow */
     }
 
     /* Shine effect on icons */
@@ -412,7 +466,7 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -422,10 +476,27 @@
     }
 
     /* Optional: Add different green shades for variety but keep green theme */
-    .icon-home { --icon-gradient-to: #2E7D32; }
-    .icon-news { --icon-gradient-to: #1B5E20; }
-    .icon-info { --icon-gradient-to: #2E7D32; }
-    .icon-team { --icon-gradient-to: #1B5E20; }
-    .icon-reports { --icon-gradient-to: #0D3D0D; }
-    .icon-contact { --icon-gradient-to: #2E7D32; }
+    .icon-home {
+        --icon-gradient-to: #2E7D32;
+    }
+
+    .icon-news {
+        --icon-gradient-to: #1B5E20;
+    }
+
+    .icon-info {
+        --icon-gradient-to: #2E7D32;
+    }
+
+    .icon-team {
+        --icon-gradient-to: #1B5E20;
+    }
+
+    .icon-reports {
+        --icon-gradient-to: #0D3D0D;
+    }
+
+    .icon-contact {
+        --icon-gradient-to: #2E7D32;
+    }
 </style>
