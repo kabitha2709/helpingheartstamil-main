@@ -330,6 +330,12 @@
                     </div>
 
                 </div>
+
+                <!-- Pagination Container -->
+                <div id="pagination" class="pagination"
+                    style="margin-top: 40px; justify-content: center; display: flex; gap: 10px;">
+                    <!-- Pagination buttons will be added here by JS -->
+                </div>
             </div>
 
 
@@ -343,6 +349,75 @@
         <p id="notification-message">Welcome to Helping Hearts Tamil!</p>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardsPerPage = 16;
+            const grid = document.querySelector('.program-grid');
+            const cards = Array.from(grid.querySelectorAll('.program-card'));
+            const paginationContainer = document.getElementById('pagination');
+            let currentPage = 1;
+
+            function showPage(page) {
+                const start = (page - 1) * cardsPerPage;
+                const end = start + cardsPerPage;
+
+                cards.forEach((card, index) => {
+                    if (index >= start && index < end) {
+                        card.style.display = 'flex';
+                        // Re-trigger reveal animation if needed
+                        setTimeout(() => card.classList.add('visible'), 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('visible');
+                    }
+                });
+
+                updatePaginationButtons();
+                window.scrollTo({ top: grid.offsetTop - 100, behavior: 'smooth' });
+            }
+
+            function updatePaginationButtons() {
+                const totalPages = Math.ceil(cards.length / cardsPerPage);
+                paginationContainer.innerHTML = '';
+
+                if (totalPages <= 1) return;
+
+                // Previous button
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'btn btn-back' + (currentPage === 1 ? ' disabled' : '');
+                prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; showPage(currentPage); } };
+                paginationContainer.appendChild(prevBtn);
+
+                // Page numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    const btn = document.createElement('button');
+                    btn.className = 'btn ' + (i === currentPage ? 'btn-primary' : 'btn-outline');
+                    btn.style.width = '40px';
+                    btn.style.height = '40px';
+                    btn.style.padding = '0';
+                    btn.style.borderRadius = '50%';
+                    btn.textContent = i;
+                    btn.onclick = () => { currentPage = i; showPage(currentPage); };
+                    paginationContainer.appendChild(btn);
+                }
+
+                // Next button
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'btn btn-next' + (currentPage === totalPages ? ' disabled' : '');
+                nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.onclick = () => { if (currentPage < totalPages) { currentPage++; showPage(currentPage); } };
+                paginationContainer.appendChild(nextBtn);
+            }
+
+            if (cards.length > cardsPerPage) {
+                showPage(1);
+            }
+        });
+    </script>
+
     <!-- Removed old styles for .no-image since images are added -->
     <style>
         /* Responsive Grid Override for this page */
@@ -350,6 +425,59 @@
             .program-grid {
                 grid-template-columns: repeat(4, 1fr) !important;
                 gap: 20px;
+            }
+        }
+
+        /* Mobile View Side-by-Side Cards */
+        @media (max-width: 768px) {
+            .program-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+            }
+
+            .program-card {
+                flex-direction: row !important;
+                height: 120px;
+                align-items: center;
+                gap: 0;
+            }
+
+            .program-card-image {
+                flex: 0 0 120px;
+                height: 100%;
+            }
+
+            .program-card-body {
+                padding: 10px 15px;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            .program-card-title {
+                font-size: 0.95rem !important;
+                margin-bottom: 4px !important;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .program-card-desc {
+                font-size: 0.8rem !important;
+                line-height: 1.3 !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin: 0 !important;
+            }
+
+            .program-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .pagination {
+                margin-bottom: 100px !important;
             }
         }
     </style>
