@@ -3336,35 +3336,6 @@ h6 {
         gap: 10px;
     }
 
-    /* Mobile Header Top Row */
-    .mobile-header-top {
-        background: var(--color-surface);
-        border-bottom: 1px solid var(--color-border);
-        padding: 8px 0;
-    }
-
-    .mobile-header-top-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-    }
-
-    .mobile-donate-link {
-        background: var(--color-primary);
-        color: white;
-        padding: 5px 12px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.75rem;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        margin-left: 36px;
-        /* Align with logo vertically (skips hamburger width) */
-    }
-
     .mobile-header-social-wrap {
         display: flex;
         gap: 12px;
@@ -3426,7 +3397,8 @@ h6 {
     }
 
     .site-title {
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
+        /* Smaller for single row */
         white-space: nowrap;
         font-weight: 700;
         margin: 0;
@@ -3480,6 +3452,17 @@ h6 {
     /* Hide desktop-only elements */
     .desktop-only {
         display: none !important;
+    }
+
+    /* Compact Donate Button for Mobile Single Row */
+    .donate-btn-header {
+        padding: 4px 10px !important;
+        font-size: 0.7rem !important;
+        border-width: 1px !important;
+    }
+
+    .donate-btn-header i {
+        font-size: 0.65rem !important;
     }
 }
 
@@ -3633,8 +3616,8 @@ h6 {
         /* Smaller width for desktop */
         opacity: 1 !important;
         border: 1px solid var(--color-border) !important;
-        padding: 5px 12px !important;
-        /* Slightly more compact padding */
+        padding: 10px 15px !important;
+        /* Increased for more height */
         padding-right: 35px !important;
         border-radius: 20px !important;
         background: var(--color-surface) !important;
@@ -3670,6 +3653,15 @@ h6 {
     .site-slogan {
         margin-bottom: -2px !important;
     }
+
+    /* Consistent spacing below header for all pages - Desktop */
+    /* main#main-content,
+    .layout,
+    .programs-section,
+    .hero-banner,
+    .container:first-of-type {
+        margin-top: 20px !important;
+    } */
 }
 
 /* Ensure global top-bar is hidden since we migrated */
