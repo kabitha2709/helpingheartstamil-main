@@ -258,9 +258,9 @@ function initSearch() {
         { title: "எம்மைப்பற்றி", category: "பக்கங்கள்", url: "aboutus.html", content: "Helping Hearts Foundation About Us" },
     ];
 
-    function performSearch(query) {
+    function performSearch(query, targetResults) {
         if (!query || query.length < 2) {
-            if (searchResults) searchResults.classList.remove('active');
+            if (targetResults) targetResults.classList.remove('active');
             return;
         }
 
@@ -271,15 +271,15 @@ function initSearch() {
             item.category.toLowerCase().includes(query)
         );
 
-        displayResults(results);
+        displayResults(results, targetResults);
     }
 
-    function displayResults(results) {
-        if (!searchResults) return;
-        searchResults.innerHTML = '';
+    function displayResults(results, targetResults) {
+        if (!targetResults) return;
+        targetResults.innerHTML = '';
 
         if (results.length === 0) {
-            searchResults.innerHTML = '<div class="search-result-item">முடிவுகள் எதுவும் இல்லை</div>';
+            targetResults.innerHTML = '<div class="search-result-item">முடிவுகள் எதுவும் இல்லை</div>';
         } else {
             results.slice(0, 5).forEach(result => {
                 const div = document.createElement('div');
@@ -290,47 +290,87 @@ function initSearch() {
                         <p>${result.category} - ${result.content.substring(0, 50)}...</p>
                     </a>
                 `;
-                searchResults.appendChild(div);
+                targetResults.appendChild(div);
             });
 
             if (results.length > 5) {
                 const moreDiv = document.createElement('div');
                 moreDiv.className = 'search-result-item';
                 moreDiv.innerHTML = `<a href="#"><strong>மேலும் ${results.length - 5} முடிவுகள்...</strong></a>`;
-                searchResults.appendChild(moreDiv);
+                targetResults.appendChild(moreDiv);
             }
         }
 
-        searchResults.classList.add('active');
+        targetResults.classList.add('active');
     }
+
+    // Mobile Search Elements
+    const searchPopup = document.getElementById('searchPopup');
+    const closeSearchPopup = document.getElementById('closeSearchPopup');
+    const mobileSearchInput = document.getElementById('mobileSearchInput');
+    const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+    const mobileSearchResults = document.getElementById('mobileSearchResults');
 
     // Event listeners
     searchBtn.addEventListener('click', (e) => {
-        // Prevent default if it's inside a form, though it's a button type=submit usually
         e.preventDefault();
 
-        const container = document.querySelector('.search-container');
-        if (!container.classList.contains('active')) {
-            container.classList.add('active');
-            searchInput.focus();
+        // Detect if mobile
+        if (window.innerWidth <= 768) {
+            if (searchPopup) {
+                searchPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => mobileSearchInput?.focus(), 100);
+            }
         } else {
-            if (searchInput.value.trim() === "") {
-                container.classList.remove('active');
+            const container = document.querySelector('.search-container');
+            if (!container.classList.contains('active')) {
+                container.classList.add('active');
+                searchInput.focus();
             } else {
-                performSearch(searchInput.value);
+                if (searchInput.value.trim() === "") {
+                    container.classList.remove('active');
+                } else {
+                    performSearch(searchInput.value, searchResults);
+                }
             }
         }
     });
 
+    if (closeSearchPopup) {
+        closeSearchPopup.addEventListener('click', () => {
+            searchPopup.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
     searchInput.addEventListener('input', (e) => {
-        performSearch(e.target.value);
+        performSearch(e.target.value, searchResults);
     });
 
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            performSearch(searchInput.value);
+            performSearch(searchInput.value, searchResults);
         }
     });
+
+    // Mobile Search Listeners
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('input', (e) => {
+            performSearch(e.target.value, mobileSearchResults);
+        });
+        mobileSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(mobileSearchInput.value, mobileSearchResults);
+            }
+        });
+    }
+
+    if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener('click', () => {
+            performSearch(mobileSearchInput.value, mobileSearchResults);
+        });
+    }
 
     // Close search bar and results when clicking outside
     document.addEventListener('click', (e) => {
@@ -338,6 +378,12 @@ function initSearch() {
         if (container && !container.contains(e.target) && !searchBtn.contains(e.target)) {
             container.classList.remove('active');
             if (searchResults) searchResults.classList.remove('active');
+        }
+
+        // Background click to close popup
+        if (e.target === searchPopup) {
+            searchPopup.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 }
