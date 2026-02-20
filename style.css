@@ -296,12 +296,13 @@ h6 {
 
 /* ===== TOP BAR ===== */
 .top-bar {
-    background: var(--color-primary-light);
+    background: var(--color-surface);
     color: var(--color-text);
     font-size: 0.875rem;
-    padding: 8px 0;
+    padding: 6px 0;
     transition: background 0.3s ease, color 0.3s ease;
     border-bottom: 1px solid var(--color-border);
+    border-top: none !important;
 }
 
 [data-theme="dark"] .top-bar {
@@ -531,8 +532,10 @@ h6 {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 6px 0 2px;
-    margin-bottom: 5px;
+    padding: 4px 0 0px;
+    /* Reduced from 6px 0 2px */
+    margin-bottom: 0px;
+    /* Reduced from 5px */
     transition: var(--transition);
 }
 
@@ -677,7 +680,7 @@ h6 {
 .nav-text-link.nav-donate {
     background: #ffffff;
     color: var(--color-primary) !important;
-    margin-left: 4px;
+    margin-left: 5px;
     border: 1px solid var(--color-primary);
 }
 
@@ -2434,7 +2437,7 @@ h6 {
     .hero-slider+.layout,
     .hero+.layout,
     #main-content>.layout {
-        padding-top: 50px !important;
+        padding-top: 30px !important;
     }
 
     .logo-img {
@@ -2488,8 +2491,8 @@ h6 {
 /* Mobile Landscape (768px) */
 @media (max-width: 768px) {
     .top-bar {
-        display: block;
-        /* Show top bar on mobile */
+        display: none !important;
+        /* Force hide old top bar on mobile as well */
         padding: 10px 0;
     }
 
@@ -3328,8 +3331,8 @@ h6 {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
-        /* Adjust padding */
+        padding: 5px 15px 2px;
+        /* Reduced from 10px */
         gap: 10px;
     }
 
@@ -3358,6 +3361,8 @@ h6 {
         display: flex;
         align-items: center;
         gap: 5px;
+        margin-left: 36px;
+        /* Align with logo vertically (skips hamburger width) */
     }
 
     .mobile-header-social-wrap {
@@ -3387,7 +3392,8 @@ h6 {
     }
 
     .logo-wrapper img {
-        height: 35px;
+        height: 30px;
+        /* Reduced from 35px */
         /* Even smaller for very small widths */
         width: auto;
     }
@@ -3553,10 +3559,12 @@ h6 {
 
     /* Site Top Bar (Desktop) */
     .site-top-bar {
-        background: var(--color-primary-light);
+        background: var(--color-surface);
+        /* Changed from primary-light */
         border-bottom: 1px solid var(--color-border);
         border-top: none;
-        padding: 10px 0;
+        padding: 6px 0;
+        /* Match reduced padding */
         font-size: 0.85rem;
         color: var(--color-text-muted);
     }
@@ -3846,11 +3854,12 @@ h6 {
 
     /* New Mobile Horizontal Scroll Nav */
     .mobile-nav-scroll {
-        display: block;
+        display: none;
         background: var(--color-surface);
         border-top: 1px solid var(--color-border);
         position: sticky;
-        top: 60px;
+        top: 50px;
+        /* Reduced from 60px to match new header height */
         z-index: 90;
         overflow: visible;
     }
@@ -3881,7 +3890,8 @@ h6 {
 
     .scroll-menu>li>a {
         display: block;
-        padding: 12px 0;
+        padding: 8px 0;
+        /* Reduced from 12px */
         color: var(--color-text);
         font-weight: 600;
         font-size: 0.85rem;
@@ -4090,13 +4100,15 @@ h6 {
    NEW HEADER STYLES (STICKY TOP BAR)
    ========================================= */
 .site-top-bar {
-    background: var(--color-primary-light);
+    background: var(--color-surface);
+    /* Changed from primary-light to remove green */
     color: var(--color-text);
     font-size: 0.875rem;
-    padding: 8px 0;
+    padding: 6px 0;
+    /* Reduced from 8px */
     transition: background 0.3s ease, color 0.3s ease;
     border-bottom: 1px solid var(--color-border);
-    border-top: none;
+    border-top: none !important;
     box-shadow: none;
 }
 
@@ -4160,9 +4172,11 @@ h6 {
 
 /* Mobile Header Top Styles */
 .mobile-header-top {
-    background: var(--color-primary-light);
+    background: var(--color-surface);
+    /* Changed from primary-light to remove green */
     border-bottom: 1px solid var(--color-border);
-    padding: 8px 0;
+    padding: 4px 0;
+    /* Reduced from 8px */
 }
 
 [data-theme="dark"] .mobile-header-top {
@@ -4193,4 +4207,16 @@ h6 {
 .mobile-header-social-wrap {
     display: flex;
     gap: 10px;
+}
+
+/* Custom fix to remove any green line at the very top */
+.site-top-bar,
+.mobile-header-top,
+.site-header,
+.top-bar,
+.site-top-bar .container,
+.mobile-header-top .container {
+    border-top: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
 }
